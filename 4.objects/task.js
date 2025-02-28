@@ -3,8 +3,9 @@ function Student(name, gender, age) {
 	this.gender = gender;
 	this.age = age;
 	this.marks = [];
+    this.subject = null;
 	this.setSubject = function(subjectName) {
-		this.subjectName = subjectName;
+		this.subject = subjectName;
 	}
 }
 let student1 = new Student("Василиса", "женский", 19);
