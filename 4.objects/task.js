@@ -3,8 +3,6 @@ function Student(name, gender, age) {
 	this.gender = gender;
 	this.age = age;
 	this.marks = [];
-	this.subjectName = null;
-	this.excluded = null;
 }
 
 Student.prototype.setSubject = function(subjectName) {
@@ -31,8 +29,8 @@ Student.prototype.getAverage = function(...marks) {
 
 Student.prototype.exclude = function(reason) {
 	this.excluded = reason;
-	this.subjectName = null;
-	this.marks = [];
+	delete this.subjectName;
+	delete this.marks;
 }
 
 let student1 = new Student("Василиса", "женский", 19);
