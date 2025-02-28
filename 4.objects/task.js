@@ -3,13 +3,12 @@ function Student(name, gender, age) {
 	this.gender = gender;
 	this.age = age;
 	this.marks = [];
+	this.setSubject = function(subjectName) {
+		this.subjectName = subjectName;
+	}
 }
 let student1 = new Student("Василиса", "женский", 19);
 let student2 = new Student("Артём", "мужской", 25);
-Student.prototype.setSubject = function(subjectName) {
-	this.subjectName = subjectName;
-}
-
 Student.prototype.addMarks = function(...marks) {
 	if (this.excluded) {
 		return
